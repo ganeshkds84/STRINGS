@@ -1,11 +1,13 @@
 class solution():
     def is_palindrome(self,string):
         string=string.lower()
-        s1=string[::-1]
-        if s1==string:
-            return "palindrome"
-        else:
-            return "Not a palindrome"
+        i,j=0,len(string)-1
+        while i<j:
+            if string[i]!=string[j]:
+                return "Not palindrome"
+            i+=1
+            j-=1
+        return "Palindrome"
     
 string=input("Enter the string:")
 answer=solution()
